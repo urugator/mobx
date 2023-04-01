@@ -44,7 +44,7 @@ test("TODO", async () => {
         }
     }
 
-    const Root = observer(function Root() {
+    function Root() {
         const [x, setX] = React.useState(0)
         // Send new props to Parent
         return (
@@ -52,7 +52,7 @@ test("TODO", async () => {
                 <Parent x={x} />
             </div>
         )
-    })
+    }
 
     // const app = (
     //     <StrictMode>
