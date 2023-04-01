@@ -69,6 +69,7 @@ export function useObserver<T>(fn: () => T, baseComponentName: string = "observe
             // got dropped, and we don't want to make state changes then.
             // (It triggers warnings in StrictMode, for a start.)
             if (adm.mounted) {
+                console.log("useObserver.forceUpdate")
                 // We have reached useEffect(), so we're mounted, and can trigger an update
                 forceUpdate()
             } else {
