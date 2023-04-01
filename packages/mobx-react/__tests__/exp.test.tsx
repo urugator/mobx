@@ -35,12 +35,12 @@ test("TODO", async () => {
     @observer
     class Parent extends React.Component<any> {
         // intentionally stable, so test breaks when you disable observable props (comment line 239 in observerClass)
-        renderChild = () => {
+        renderCallback = () => {
             return this.props.x
         }
         render() {
             // Access observable props as part of child
-            return <Child>{this.renderChild}</Child>
+            return <Child>{this.renderCallback}</Child>
         }
     }
 
